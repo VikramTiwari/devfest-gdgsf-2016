@@ -1,5 +1,14 @@
 runtime: nodejs
 vm: true
+api_version: 1
+
+manual_scaling:
+  instances: 1
+
+resources:
+  cpu: .5
+  memory_gb: 0.18
+  disk_size_gb: 10
 
 skip_files:
  - ^node_modules$
