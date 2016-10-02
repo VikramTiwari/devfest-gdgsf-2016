@@ -1,5 +1,11 @@
 #!/usr/bin/env node
 
+// only for production instances
+if (process.env.NODE_ENV === 'production') {
+  require('@google/cloud-trace');
+  require('@google/cloud-debug');
+}
+
 /**
  * Module dependencies.
  */
