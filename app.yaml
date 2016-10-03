@@ -2,13 +2,17 @@ runtime: nodejs
 vm: true
 api_version: 1
 
-manual_scaling:
-  instances: 1
+automatic_scaling:
+  min_num_instances: 5
+  max_num_instances: 20
+  cool_down_period_sec: 120 # default value
+  cpu_utilization:
+    target_utilization: 0.5
 
 resources:
-  cpu: .5
-  memory_gb: 0.18
-  disk_size_gb: 10
+  cpu: 4
+  memory_gb: 15
+  disk_size_gb: 50
 
 skip_files:
  - ^node_modules$
